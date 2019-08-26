@@ -9,7 +9,8 @@ CREATE TABLE [dbo].[Contacts]
 [Address3] [nvarchar] (128) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [JoiningDate] [datetime] NULL CONSTRAINT [DF_const_join_date] DEFAULT (getdate()),
 [ModifiedDate] [datetime] NULL,
-[Email] [nvarchar] (256) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+[Email] [nvarchar] (256) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Image] [image] NULL
 ) ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[Contacts] ADD CONSTRAINT [PK_Contacts] PRIMARY KEY CLUSTERED  ([ID]) ON [PRIMARY]

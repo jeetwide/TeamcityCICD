@@ -18,7 +18,8 @@ CREATE TABLE [dbo].[Contacts]
 [TestBottleNumber] [nchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [TestMOBILE`] [nchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [TestTeamCity] [nchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-[TestDining] [nchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+[TestDining] [nchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[TestEMAIL] [nchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
 ) ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[Contacts] ADD CONSTRAINT [PK_Contacts] PRIMARY KEY CLUSTERED  ([ID]) ON [PRIMARY]

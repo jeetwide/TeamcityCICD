@@ -19,8 +19,8 @@
    #$buildDb = "Data Source=.\SQL2014"
       
    # Required for sync step only - the database you wish to deploy to. Uncomment below and also lines 46-8 if running a sync step.
-   $targetServerInstance = "DTC209\SQLEXPRESS2017"
-   $targetDatabaseName = "TestDB"
+   #$targetServerInstance = "DTC209\SQLEXPRESS2017"
+   #$targetDatabaseName = "TestDB"
    
    # Optional - If using SQL Auth for target DB add a username and password. Also, uncomment these parameters from line 42 below.
    $username = "sa"
@@ -43,6 +43,6 @@
     Invoke-DatabaseTests $package | Export-DatabaseTestResults -OutputFile "$outputDir\$packageID.$packageVersion.junit.xml"
  
    # # Sync a test database
-    $targetDB = New-DatabaseConnection -ServerInstance $targetServerInstance -Database $targetDatabaseName # -Username $username -Password $password
-    Test-DatabaseConnection $targetDB
-    Sync-DatabaseSchema -Source $package -AbortOnWarningLevel None  -Target $targetDB 
+   # $targetDB = New-DatabaseConnection -ServerInstance $targetServerInstance -Database $targetDatabaseName # -Username $username -Password $password
+   # Test-DatabaseConnection $targetDB
+   # Sync-DatabaseSchema -Source $package -AbortOnWarningLevel None  -Target $targetDB 

@@ -23,8 +23,8 @@
    $targetDatabaseName = "TestDB"
    
    # Optional - If using SQL Auth for target DB add a username and password. Also, uncomment these parameters from line 42 below.
-   $username = "sa"
-   $password = "sa@12345"
+  # $username = "sa"
+  # $password = "sa@12345"
  
 # Script to build DB (you can probably leave this as is)
    
@@ -43,6 +43,6 @@
     Invoke-DatabaseTests $package | Export-DatabaseTestResults -OutputFile "$outputDir\$packageID.$packageVersion.junit.xml"
  
    # # Sync a test database
-    $targetDB = New-DatabaseConnection -ServerInstance $targetServerInstance -Database $targetDatabaseName # -Username $username -Password $password
-    Test-DatabaseConnection $targetDB
-    Sync-DatabaseSchema -Source $package -AbortOnWarningLevel None  -Target $targetDB 
+   # $targetDB = New-DatabaseConnection -ServerInstance $targetServerInstance -Database $targetDatabaseName # -Username $username -Password $password
+   # Test-DatabaseConnection $targetDB
+   # Sync-DatabaseSchema -Source $package -AbortOnWarningLevel None  -Target $targetDB 

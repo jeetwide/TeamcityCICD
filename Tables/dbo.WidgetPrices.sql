@@ -5,8 +5,7 @@ CREATE TABLE [dbo].[WidgetPrices]
 [Price] [money] NULL,
 [ValidFrom] [datetime] NULL CONSTRAINT [DF_WidgetPrices_ValidFrom] DEFAULT (getdate()),
 [ValidTo] [datetime] NULL,
-[Active] [char] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL CONSTRAINT [DF_WidgetPrices_Active] DEFAULT ('N'),
-[WidgetSize] [nchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+[Active] [char] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL CONSTRAINT [DF_WidgetPrices_Active] DEFAULT ('N')
 ) ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[WidgetPrices] ADD CONSTRAINT [PK_WidgetPrices] PRIMARY KEY NONCLUSTERED  ([RecordID]) ON [PRIMARY]

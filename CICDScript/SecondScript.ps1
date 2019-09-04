@@ -10,7 +10,7 @@
    
    # Required - package name and version number (must not already exist in output directory)
    $packageID = "WidgetPackage"
-   $packageVersion = 0.3
+   $packageVersion = 1.2
    
    # Required - An output directory in which to save your build artifacts (must already exist)
    $outputDir = "C:\JenkinsDrops"

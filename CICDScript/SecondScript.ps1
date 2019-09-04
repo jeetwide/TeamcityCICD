@@ -6,12 +6,16 @@
 # Variables (fill these in)
  
    # Required - the location of your source code
-   $scriptsFolder = "E:\.Net\GitHubDemoDatabase\TeamCityVersionControl\TeamcityCICD\TeamcityCICD"
+   #$scriptsFolder = "E:\.Net\GitHubDemoDatabase\TeamCityVersionControl\TeamcityCICD\TeamcityCICD"
+   
+  $scriptsFolder = $args[0]
    
    # Required - package name and version number (must not already exist in output directory)
    $packageID = "WidgetPackage"
-   $packageVersion = 1.2
    
+  # $packageVersion = 1.6
+ 
+   $packageVersion = $args[1]
    # Required - An output directory in which to save your build artifacts (must already exist)
    $outputDir = "C:\JenkinsDrops"
    
@@ -19,8 +23,8 @@
    #$buildDb = "Data Source=.\SQL2014"
       
    # Required for sync step only - the database you wish to deploy to. Uncomment below and also lines 46-8 if running a sync step.
-   $targetServerInstance = "DTC209\SQLEXPRESS2017"
-   $targetDatabaseName = "TestDB"
+  # $targetServerInstance = "DTC209\SQLEXPRESS2017"
+   #$targetDatabaseName = "TestDB"
    
    # Optional - If using SQL Auth for target DB add a username and password. Also, uncomment these parameters from line 42 below.
   # $username = "sa"

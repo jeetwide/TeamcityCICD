@@ -50,3 +50,5 @@
    # $targetDB = New-DatabaseConnection -ServerInstance $targetServerInstance -Database $targetDatabaseName # -Username $username -Password $password
    # Test-DatabaseConnection $targetDB
    # Sync-DatabaseSchema -Source $package -AbortOnWarningLevel None  -Target $targetDB 
+
+nuget push "C:\JenkinsDrops\*.nupkg"  API-DOZRRXWTM4W2VHTIXF1ZJX3EBS  -src http://localhost/nuget/packages
